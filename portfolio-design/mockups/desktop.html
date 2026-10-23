@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Portfolio · desktop</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+.dark{--bg:#0B0D10;--bg-bar:rgba(11,13,16,.85);--surface:#12161B;--surface-2:#181D23;--border:#232A33;--border-strong:#323B47;--text:#E6E8EB;--muted:#8B95A3;--accent:#F5A524;--accent-fg:#0B0D10;--accent-soft:rgba(245,165,36,.12)}
+.light{--bg:#F7F8FA;--bg-bar:rgba(247,248,250,.85);--surface:#FFFFFF;--surface-2:#F0F2F5;--border:#E2E5EA;--border-strong:#C9CED6;--text:#0B0D10;--muted:#5B6472;--accent:#B45309;--accent-fg:#FFFFFF;--accent-soft:rgba(180,83,9,.08)}
+.dark,.light{--sans:'Geist',ui-sans-serif,system-ui,sans-serif;--mono:'Geist Mono',ui-monospace,monospace}
+a{color:var(--muted);text-decoration:none;transition:color .15s}
+a:hover{color:var(--accent)}
+a.btn-primary,a.btn-primary:hover{color:var(--accent-fg)}
+a.btn-primary:hover{filter:brightness(1.08)}
+a.btn-outline{color:var(--text)}
+a.btn-outline:hover{color:var(--accent);border-color:var(--accent)}
+.card{transition:border-color .15s}
+.card:hover{border-color:var(--border-strong)}
+button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+</helmet>
+<div id="top" class="{{themeClass}}" style="background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 16px; line-height: 26px; min-height: 100%;">
+
+<header style="position: sticky; top: 0; z-index: 10; background: var(--bg-bar); backdrop-filter: blur(4px); border-bottom: 1px solid var(--border);">
+<div style="max-width: 1120px; margin: 0 auto; padding: 0 32px; height: 56px; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+<a href="#top" style="font-weight: 600; font-size: 15px; color: var(--text);">Nahuel Fernandez</a>
+<nav aria-label="Main" style="display: flex; align-items: center; gap: 24px; font-family: var(--mono); font-size: 13px;">
+<a href="#work">Case study</a>
+<a href="#projects">Projects</a>
+<a href="#process">How I work</a>
+<a class="btn-outline" href="mailto:nahuel@yourdomain.com?subject=Pilot%20project" style="font-family: var(--sans); font-weight: 500; font-size: 14px; height: 36px; display: inline-flex; align-items: center; padding: 0 14px; border: 1px solid var(--border-strong); border-radius: 6px;">Email me</a>
+<button type="button" aria-label="Toggle light and dark theme" onClick="{{toggleTheme}}" style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; background: transparent; border: 1px solid var(--border); border-radius: 6px; color: var(--muted); cursor: pointer;">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+</nav>
+</div>
+</header>
+
+<main>
+<section aria-label="Introduction" style="max-width: 1120px; margin: 0 auto; padding: 112px 32px 80px; display: flex; flex-wrap: wrap; align-items: center; gap: 56px;">
+<div style="flex: 7 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 24px;">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div role="img" aria-label="Headshot placeholder" style="width: 40px; height: 40px; border-radius: 50%; background: var(--surface-2); border: 1px solid var(--border-strong); display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 12px; color: var(--muted); flex-shrink: 0;">NF</div>
+<p style="margin: 0; font-family: var(--mono); font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; color: var(--muted);">Full-stack developer · Argentina (UTC-3)</p>
+</div>
+<h1 style="margin: 0; font-size: 52px; line-height: 56px; font-weight: 600; letter-spacing: -0.025em; max-width: 620px;">Reliable data collection and automation, built to keep running.</h1>
+<p style="margin: 0; font-size: 18px; line-height: 30px; color: var(--muted); max-width: 560px;">I build scrapers, data pipelines and the systems around them: job queues, retries, recovery after failures and monitoring. I work async, with clear written updates.</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px; padding-top: 8px;">
+<a class="btn-primary" href="mailto:nahuel@yourdomain.com?subject=Pilot%20project" style="height: 44px; display: inline-flex; align-items: center; gap: 8px; padding: 0 20px; background: var(--accent); border-radius: 6px; font-weight: 500; font-size: 15px;">Email me
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+</a>
+<a href="#" style="font-family: var(--mono); font-size: 14px; display: inline-flex; align-items: center; gap: 4px; min-height: 44px;">LinkedIn
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+</a>
+<a href="#" style="font-family: var(--mono); font-size: 14px; display: inline-flex; align-items: center; gap: 4px; min-height: 44px;">GitHub
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+</a>
+</div>
+</div>
+
+<div style="flex: 5 1 380px; min-width: 0; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; font-family: var(--mono); font-size: 13px; line-height: 20px;">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; background: var(--surface-2); border-bottom: 1px solid var(--border);">
+<span style="color: var(--muted);">what-i-build</span>
+<div aria-hidden="true" style="display: flex; gap: 6px;">
+<span style="width: 8px; height: 8px; border-radius: 50%; background: var(--border-strong);"></span>
+<span style="width: 8px; height: 8px; border-radius: 50%; background: var(--border-strong);"></span>
+<span style="width: 8px; height: 8px; border-radius: 50%; background: var(--border-strong);"></span>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: 80px minmax(0, 1fr); row-gap: 12px; column-gap: 16px; padding: 20px 16px;">
+<span style="color: var(--accent);">collect</span><span>web sources · APIs · browsers</span>
+<span style="color: var(--accent);">queue</span><span>Redis job queues, split by load</span>
+<span style="color: var(--accent);">recover</span><span>retries · resume after failure</span>
+<span style="color: var(--accent);">watch</span><span>monitoring · alerts</span>
+<span style="color: var(--accent);">ship</span><span>API + web app</span>
+</div>
+<div style="display: grid; grid-template-columns: 80px minmax(0, 1fr); column-gap: 16px; padding: 16px; border-top: 1px solid var(--border);">
+<span style="color: var(--muted);">stack</span>
+<span style="color: var(--muted);">TypeScript · Node.js · React · Next.js · PostgreSQL · Prisma · Python · FastAPI · Playwright · Redis</span>
+</div>
+</div>
+</section>
+
+<section aria-label="Case study numbers" style="max-width: 1120px; margin: 0 auto; padding: 0 32px 96px;">
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 8px; overflow: hidden;">
+<div style="background: var(--bg); padding: 24px; display: flex; flex-direction: column; gap: 8px;">
+<span style="font-size: 32px; line-height: 36px; font-weight: 600; letter-spacing: -0.02em;">38</span>
+<span style="font-family: var(--mono); font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; color: var(--muted);">Data source modules</span>
+</div>
+<div style="background: var(--bg); padding: 24px; display: flex; flex-direction: column; gap: 8px;">
+<span style="font-size: 32px; line-height: 36px; font-weight: 600; letter-spacing: -0.02em;">~1,700</span>
+<span style="font-family: var(--mono); font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; color: var(--muted);">Automated tests</span>
+</div>
+<div style="background: var(--bg); padding: 24px; display: flex; flex-direction: column; gap: 8px;">
+<span style="font-size: 32px; line-height: 36px; font-weight: 600; letter-spacing: -0.02em;">~3 months</span>
+<span style="font-family: var(--mono); font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; color: var(--muted);">Built solo</span>
+</div>
+<div style="background: var(--bg); padding: 24px; display: flex; flex-direction: column; gap: 8px;">
+<span style="font-size: 32px; line-height: 36px; font-weight: 600; letter-spacing: -0.02em;">3–4 min</span>
+<span style="font-family: var(--mono); font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; color: var(--muted);">Per report</span>
+</div>
+</div>
+<p style="margin: 12px 0 0; font-size: 14px; line-height: 20px; color: var(--muted);">From the case study below. Report time measured on the first 20 studies.</p>
+</section>
+
+<section id="work" aria-labelledby="work-title" style="border-top: 1px solid var(--border); scroll-margin-top: 72px;">
+<div style="max-width: 1120px; margin: 0 auto; padding: 96px 32px; display: flex; flex-direction: column; gap: 40px;">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 720px;">
+<p style="margin: 0; font-family: var(--mono); font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; color: var(--accent);">01 / Case study</p>
+<h2 id="work-title" style="margin: 0; font-size: 32px; line-height: 38px; font-weight: 600; letter-spacing: -0.02em;">A due diligence report platform, built solo</h2>
+<p style="margin: 4px 0 0; font-size: 18px; line-height: 30px; color: var(--muted);">A web platform that produces due diligence reports on people and companies. It collects data from 38 source modules in parallel and assembles the results into one report. The client uses it in production, internally. I built the backend, the API and the web app on my own in about three months.</p>
+</div>
+
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 12px;">
+<div style="overflow-x: auto;">
+<div role="img" aria-label="Architecture: 38 source modules feed Redis queues, one per module; Python and Playwright workers process them; a FastAPI and MySQL API serves a React and TypeScript web app." style="min-width: 880px; display: flex; align-items: stretch; gap: 0;">
+<div style="flex: 1 1 0; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px; display: flex; flex-direction: column; gap: 8px;">
+<span style="font-weight: 600; font-size: 15px; line-height: 20px;">Sources</span>
+<span style="font-family: var(--mono); font-size: 12px; line-height: 18px; color: var(--muted);">38 modules<br>21 people<br>17 companies</span>
+</div>
+<div aria-hidden="true" style="width: 32px; display: flex; align-items: center; justify-content: center; color: var(--muted);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg></div>
+<div style="flex: 1 1 0; background: var(--accent-soft); border: 1px solid var(--accent); border-radius: 8px; padding: 16px; display: flex; flex-direction: column; gap: 8px;">
+<span style="font-weight: 600; font-size: 15px; line-height: 20px; color: var(--accent);">Redis queues</span>
+<span style="font-family: var(--mono); font-size: 12px; line-height: 18px; color: var(--muted);">one per module<br>split by load</span>
+</div>
+<div aria-hidden="true" style="width: 32px; display: flex; align-items: center; justify-content: center; color: var(--muted);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg></div>
+<div style="flex: 1 1 0; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px; display: flex; flex-direction: column; gap: 8px;">
+<span style="font-weight: 600; font-size: 15px; line-height: 20px;">Workers</span>
+<span style="font-family: var(--mono); font-size: 12px; line-height: 18px; color: var(--muted);">Python<br>Playwright</span>
+</div>
+<div aria-hidden="true" style="width: 32px; display: flex; align-items: center; justify-content: center; color: var(--muted);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg></div>
+<div style="flex: 1 1 0; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px; display: flex; flex-direction: column; gap: 8px;">
+<span style="font-weight: 600; font-size: 15px; line-height: 20px;">API</span>
+<span style="font-family: var(--mono); font-size: 12px; line-height: 18px; color: var(--muted);">FastAPI<br>MySQL</span>
+</div>
+<div aria-hidden="true" style="width: 32px; display: flex; align-items: center; justify-content: center; color: var(--muted);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg></div>
+<div style="flex: 1 1 0; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px; display: flex; flex-direction: column; gap: 8px;">
+<span style="font-weight: 600; font-size: 15px; line-height: 20px;">Web app</span>
+<span style="font-family: var(--mono); font-size: 12px; line-height: 18px; color: var(--muted);">React<br>TypeScript</span>
+</div>
+</div>
+</div>
+<figcaption style="font-size: 14px; line-height: 20px; color: var(--muted);">Simplified. Source names are left out for confidentiality.</figcaption>
+</figure>
+
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px;">
+<div style="display: flex; flex-direction: column; gap: 8px; padding-top: 16px; border-top: 1px solid var(--border);">
+<span style="font-family: var(--mono); font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; color: var(--accent);">Isolation</span>
+<p style="margin: 0;">Each source module runs on its own Redis queue, split by load, so a slow source doesn't hold up the rest of the report.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding-top: 16px; border-top: 1px solid var(--border);">
+<span style="font-family: var(--mono); font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; color: var(--accent);">Testing</span>
+<p style="margin: 0;">About 1,700 automated tests, and CI runs on every pull request.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding-top: 16px; border-top: 1px solid var(--border);">
+<span style="font-family: var(--mono); font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; color: var(--accent);">Delivery</span>
+<p style="margin: 0;">An API and a web app in React and TypeScript, used internally by the client in production.</p>
+</div>
+</div>
+
+<div style="max-width: 720px; display: flex; flex-direction: column; gap: 12px;">
+<dl style="margin: 0; display: grid; grid-template-columns: 140px minmax(0, 1fr); border-top: 1px solid var(--border); font-size: 15px; line-height: 22px;">
+<dt style="font-family: var(--mono); font-size: 13px; color: var(--muted); padding: 12px 0; border-bottom: 1px solid var(--border);">role</dt><dd style="margin: 0; padding: 12px 0; border-bottom: 1px solid var(--border);">Sole developer (backend, API, front end)</dd>
+<dt style="font-family: var(--mono); font-size: 13px; color: var(--muted); padding: 12px 0; border-bottom: 1px solid var(--border);">sources</dt><dd style="margin: 0; padding: 12px 0; border-bottom: 1px solid var(--border);">38 modules: 21 for people, 17 for companies</dd>
+<dt style="font-family: var(--mono); font-size: 13px; color: var(--muted); padding: 12px 0; border-bottom: 1px solid var(--border);">queues</dt><dd style="margin: 0; padding: 12px 0; border-bottom: 1px solid var(--border);">Redis, one queue per module, split by load</dd>
+<dt style="font-family: var(--mono); font-size: 13px; color: var(--muted); padding: 12px 0; border-bottom: 1px solid var(--border);">backend</dt><dd style="margin: 0; padding: 12px 0; border-bottom: 1px solid var(--border);">Python, FastAPI, Playwright, Redis, MySQL</dd>
+<dt style="font-family: var(--mono); font-size: 13px; color: var(--muted); padding: 12px 0; border-bottom: 1px solid var(--border);">front end</dt><dd style="margin: 0; padding: 12px 0; border-bottom: 1px solid var(--border);">React, TypeScript</dd>
+<dt style="font-family: var(--mono); font-size: 13px; color: var(--muted); padding: 12px 0; border-bottom: 1px solid var(--border);">quality</dt><dd style="margin: 0; padding: 12px 0; border-bottom: 1px solid var(--border);">~1,700 automated tests · CI on every pull request</dd>
+<dt style="font-family: var(--mono); font-size: 13px; color: var(--muted); padding: 12px 0; border-bottom: 1px solid var(--border);">timeline</dt><dd style="margin: 0; padding: 12px 0; border-bottom: 1px solid var(--border);">~3 months</dd>
+<dt style="font-family: var(--mono); font-size: 13px; color: var(--muted); padding: 12px 0; border-bottom: 1px solid var(--border);">report time</dt><dd style="margin: 0; padding: 12px 0; border-bottom: 1px solid var(--border);">~3–4 minutes (first 20 studies)</dd>
+<dt style="font-family: var(--mono); font-size: 13px; color: var(--muted); padding: 12px 0; border-bottom: 1px solid var(--border);">status</dt><dd style="margin: 0; padding: 12px 0; border-bottom: 1px solid var(--border);">In production, used internally by the client</dd>
+<dt style="font-family: var(--mono); font-size: 13px; color: var(--muted); padding: 12px 0; border-bottom: 1px solid var(--border);">sources used</dt><dd style="margin: 0; padding: 12px 0; border-bottom: 1px solid var(--border);">Public and third-party web sources</dd>
+</dl>
+<p style="margin: 0; font-size: 14px; line-height: 20px; color: var(--muted);">Client and data sources anonymized.</p>
+</div>
+</div>
+</section>
+
+<section id="projects" aria-labelledby="projects-title" style="border-top: 1px solid var(--border); scroll-margin-top: 72px;">
+<div style="max-width: 1120px; margin: 0 auto; padding: 96px 32px; display: flex; flex-direction: column; gap: 40px;">
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<p style="margin: 0; font-family: var(--mono); font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; color: var(--accent);">02 / Personal projects</p>
+<h2 id="projects-title" style="margin: 0; font-size: 32px; line-height: 38px; font-weight: 600; letter-spacing: -0.02em;">Two things I built for myself</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px;">
+<article class="card" style="flex: 1 1 360px; min-width: 0; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; display: flex; flex-direction: column; gap: 16px;">
+<h3 style="margin: 0; font-size: 18px; line-height: 26px; font-weight: 600; letter-spacing: -0.01em;">[Project name]</h3>
+<p style="margin: 0; color: var(--muted);">A credit-card and debt management app. [Add one line on what a user does with it.]</p>
+<ul aria-label="Stack" style="margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px; font-family: var(--mono); font-size: 12px; line-height: 16px; color: var(--muted);">
+<li style="border: 1px solid var(--border); border-radius: 4px; padding: 4px 8px;">React</li>
+<li style="border: 1px solid var(--border); border-radius: 4px; padding: 4px 8px;">TypeScript</li>
+<li style="border: 1px solid var(--border); border-radius: 4px; padding: 4px 8px;">Node.js</li>
+<li style="border: 1px solid var(--border); border-radius: 4px; padding: 4px 8px;">Express</li>
+<li style="border: 1px solid var(--border); border-radius: 4px; padding: 4px 8px;">PostgreSQL</li>
+<li style="border: 1px solid var(--border); border-radius: 4px; padding: 4px 8px;">Prisma</li>
+<li style="border: 1px solid var(--border); border-radius: 4px; padding: 4px 8px;">Zod</li>
+<li style="border: 1px solid var(--border); border-radius: 4px; padding: 4px 8px;">TanStack Query</li>
+<li style="border: 1px solid var(--border); border-radius: 4px; padding: 4px 8px;">JWT</li>
+</ul>
+<div style="display: flex; gap: 24px; margin-top: auto; font-family: var(--mono); font-size: 14px;">
+<a href="#" style="display: inline-flex; align-items: center; gap: 4px; min-height: 44px; color: var(--text);">Live demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></a>
+<a href="#" style="display: inline-flex; align-items: center; gap: 4px; min-height: 44px;">Source <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></a>
+</div>
+</article>
+<article class="card" style="flex: 1 1 360px; min-width: 0; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; display: flex; flex-direction: column; gap: 16px;">
+<h3 style="margin: 0; font-size: 18px; line-height: 26px; font-weight: 600; letter-spacing: -0.01em;">Turnealo</h3>
+<p style="margin: 0; color: var(--muted);">An appointment-management SaaS. [Add one line on who it's for.]</p>
+<ul aria-label="Stack" style="margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px; font-family: var(--mono); font-size: 12px; line-height: 16px; color: var(--muted);">
+<li style="border: 1px solid var(--border); border-radius: 4px; padding: 4px 8px;">Next.js</li>
+<li style="border: 1px dashed var(--border-strong); border-radius: 4px; padding: 4px 8px;">[rest of stack]</li>
+</ul>
+<div style="display: flex; gap: 24px; margin-top: auto; font-family: var(--mono); font-size: 14px;">
+<a href="#" style="display: inline-flex; align-items: center; gap: 4px; min-height: 44px; color: var(--text);">Live demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></a>
+<a href="#" style="display: inline-flex; align-items: center; gap: 4px; min-height: 44px;">Source <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></a>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<section id="process" aria-labelledby="process-title" style="border-top: 1px solid var(--border); scroll-margin-top: 72px;">
+<div style="max-width: 1120px; margin: 0 auto; padding: 96px 32px; display: flex; flex-direction: column; gap: 40px;">
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<p style="margin: 0; font-family: var(--mono); font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; color: var(--accent);">03 / How I work</p>
+<h2 id="process-title" style="margin: 0; font-size: 32px; line-height: 38px; font-weight: 600; letter-spacing: -0.02em;">Start small, in writing</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 48px;">
+<ol style="flex: 2 1 520px; min-width: 0; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column;">
+<li style="display: grid; grid-template-columns: 48px minmax(0, 1fr); padding: 20px 0; border-top: 1px solid var(--border);">
+<span style="font-family: var(--mono); font-size: 13px; line-height: 26px; color: var(--accent);">01</span>
+<div style="display: flex; flex-direction: column; gap: 4px;"><h3 style="margin: 0; font-size: 18px; line-height: 26px; font-weight: 600;">You describe the problem by email.</h3><p style="margin: 0; color: var(--muted);">Tell me what data you need, where it comes from and how often. A few paragraphs is enough.</p></div>
+</li>
+<li style="display: grid; grid-template-columns: 48px minmax(0, 1fr); padding: 20px 0; border-top: 1px solid var(--border);">
+<span style="font-family: var(--mono); font-size: 13px; line-height: 26px; color: var(--accent);">02</span>
+<div style="display: flex; flex-direction: column; gap: 4px;"><h3 style="margin: 0; font-size: 18px; line-height: 26px; font-weight: 600;">We agree on a small fixed-scope pilot.</h3><p style="margin: 0; color: var(--muted);">One clear deliverable, scope agreed in writing before I start, so you can judge the work before committing to more.</p></div>
+</li>
+<li style="display: grid; grid-template-columns: 48px minmax(0, 1fr); padding: 20px 0; border-top: 1px solid var(--border);">
+<span style="font-family: var(--mono); font-size: 13px; line-height: 26px; color: var(--accent);">03</span>
+<div style="display: flex; flex-direction: column; gap: 4px;"><h3 style="margin: 0; font-size: 18px; line-height: 26px; font-weight: 600;">I work async and keep you updated in writing.</h3><p style="margin: 0; color: var(--muted);">You get regular written updates on what's done, what's next and any blockers, with no need to schedule meetings.</p></div>
+</li>
+<li style="display: grid; grid-template-columns: 48px minmax(0, 1fr); padding: 20px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+<span style="font-family: var(--mono); font-size: 13px; line-height: 26px; color: var(--accent);">04</span>
+<div style="display: flex; flex-direction: column; gap: 4px;"><h3 style="margin: 0; font-size: 18px; line-height: 26px; font-weight: 600;">Optional: monthly maintenance.</h3><p style="margin: 0; color: var(--muted);">Websites and data sources change, and scrapers break when they do. If you want, I keep things running after delivery.</p></div>
+</li>
+</ol>
+<aside style="flex: 1 1 260px; min-width: 0; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 20px; display: flex; flex-direction: column; gap: 8px;">
+<span style="font-family: var(--mono); font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; color: var(--accent);">Time zone</span>
+<p style="margin: 0; font-size: 15px; line-height: 24px;">I'm on UTC-3. That overlaps with the full US business day and with European afternoons.</p>
+</aside>
+</div>
+</div>
+</section>
+
+<section id="contact" aria-labelledby="contact-title" style="border-top: 1px solid var(--border); scroll-margin-top: 72px;">
+<div style="max-width: 1120px; margin: 0 auto; padding: 96px 32px; display: flex; justify-content: center;">
+<div style="width: 100%; max-width: 640px; box-sizing: border-box; background: var(--surface); border: 1px solid var(--border); border-top: 2px solid var(--accent); border-radius: 8px; padding: 48px; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center;">
+<div role="img" aria-label="Headshot placeholder" style="width: 64px; height: 64px; border-radius: 50%; background: var(--surface-2); border: 1px solid var(--border-strong); display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 14px; color: var(--muted);">NF</div>
+<p style="margin: 0; font-family: var(--mono); font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; color: var(--accent);">04 / Contact</p>
+<h2 id="contact-title" style="margin: 0; font-size: 32px; line-height: 38px; font-weight: 600; letter-spacing: -0.02em;">Have a data collection or automation problem?</h2>
+<p style="margin: 0; font-size: 18px; line-height: 30px; color: var(--muted); max-width: 480px;">Send me a short description and I'll reply within one business day with questions or a pilot proposal.</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; padding-top: 8px;">
+<a class="btn-primary" href="mailto:nahuel@yourdomain.com?subject=Pilot%20project" style="height: 44px; display: inline-flex; align-items: center; padding: 0 20px; background: var(--accent); border-radius: 6px; font-weight: 500; font-size: 15px;">Email nahuel@yourdomain.com</a>
+<button type="button" onClick="{{copyEmail}}" style="height: 44px; display: inline-flex; align-items: center; gap: 8px; padding: 0 14px; background: transparent; border: 1px solid var(--border-strong); border-radius: 6px; color: var(--text); font-family: var(--mono); font-size: 13px; cursor: pointer;">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+<span>{{copyLabel}}</span>
+</button>
+</div>
+<div style="display: flex; gap: 24px; font-family: var(--mono); font-size: 14px;">
+<a href="#" style="display: inline-flex; align-items: center; gap: 4px; min-height: 44px;">LinkedIn <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></a>
+<a href="#" style="display: inline-flex; align-items: center; gap: 4px; min-height: 44px;">GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></a>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer style="border-top: 1px solid var(--border);">
+<div style="max-width: 1120px; margin: 0 auto; padding: 24px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; font-family: var(--mono); font-size: 12px; line-height: 16px; color: var(--muted);">
+<span>© 2026 Nahuel Fernandez Beschtedt</span>
+<div style="display: flex; align-items: center; gap: 20px;">
+<a href="#">LinkedIn</a>
+<a href="#">GitHub</a>
+</div>
+</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"dark"},"$preview":{"width":1440,"height":4000}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { theme: null, copied: false };
+  }
+  renderVals() {
+    var theme = this.state.theme || this.props.theme || 'dark';
+    var self = this;
+    return {
+      themeClass: theme === 'light' ? 'light' : 'dark',
+      copyLabel: this.state.copied ? 'Copied' : 'Copy email',
+      toggleTheme: function () {
+        self.setState({ theme: theme === 'dark' ? 'light' : 'dark' });
+      },
+      copyEmail: function () {
+        try { navigator.clipboard.writeText('nahuel@yourdomain.com'); } catch (e) {}
+        self.setState({ copied: true });
+        setTimeout(function () { self.setState({ copied: false }); }, 2000);
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
