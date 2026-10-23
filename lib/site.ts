@@ -4,8 +4,8 @@ export const SITE = {
   fullName: "Nahuel Fernandez Beschtedt",
   email: "nahuel@yourdomain.com", // [placeholder] real address
   mailSubject: "Pilot project",
-  linkedin: "#", // [placeholder] LinkedIn URL
-  github: "#", // [placeholder] GitHub URL
+  linkedin: "https://www.linkedin.com/in/nahuel-fernandez-beschtedt/",
+  github: "https://github.com/lnahuelfb",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://yourdomain.com", // [placeholder] final domain
   title: "Nahuel Fernandez · Data collection and automation developer",
   description:
