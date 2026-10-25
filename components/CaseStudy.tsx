@@ -1,4 +1,6 @@
+import { MAILTO } from "@/lib/site";
 import { ArchitectureDiagram } from "./ArchitectureDiagram";
+import { ArrowRight } from "./Icons";
 import { SectionHeading } from "./SectionHeading";
 import { SpecTable } from "./SpecTable";
 
@@ -28,6 +30,18 @@ export function CaseStudy() {
           ))}
         </div>
         <SpecTable />
+        <div className="flex flex-col gap-4 rounded-lg border border-border bg-surface p-6 shadow-[0_1px_2px_rgba(11,13,16,.04)] dark:shadow-none sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-h3 m-0">
+            Have a similar problem? <span className="text-muted">Email me a short description.</span>
+          </p>
+          <a
+            href={MAILTO}
+            className="btn-primary inline-flex h-11 shrink-0 items-center justify-center gap-2 rounded-md bg-accent px-5 text-[15px] font-medium"
+          >
+            Email me
+            <ArrowRight />
+          </a>
+        </div>
       </div>
     </section>
   );

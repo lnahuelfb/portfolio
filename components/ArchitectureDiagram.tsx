@@ -22,9 +22,9 @@ export function ArchitectureDiagram() {
             {i > 0 && (
               <div
                 aria-hidden="true"
-                className="flex h-4 shrink-0 items-center justify-center text-muted lg:h-auto lg:w-8"
+                className="flex h-6 shrink-0 items-center justify-center text-muted lg:h-auto lg:w-8"
               >
-                <Chevron className="rotate-90 lg:rotate-0" />
+                <Chevron size={20} className="rotate-90 lg:rotate-0" />
               </div>
             )}
             <div
