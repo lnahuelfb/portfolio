@@ -14,7 +14,7 @@ export function ArchitectureDiagram() {
     <figure className="m-0 flex flex-col gap-3">
       <div
         role="img"
-        aria-label="Architecture: 38 source modules feed separate Redis queues split by type, each with its own worker; Python RQ workers using Playwright process them; a FastAPI API serves a React and TypeScript web app."
+        aria-label="Architecture: 38 source modules feed Redis queues split by type, each with its own worker. Workers (Python, RQ, Playwright) feed a FastAPI API that serves a React and TypeScript web app."
         className="flex flex-col items-stretch lg:flex-row"
       >
         {NODES.map((n, i) => (

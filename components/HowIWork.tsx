@@ -1,10 +1,10 @@
 import { SectionHeading } from "./SectionHeading";
 
 const STEPS = [
-  ["You describe the problem by email.", "Tell me what data you need, where it comes from and how often. A few paragraphs is enough."],
-  ["We agree on a small fixed-scope pilot.", "The pilot has a price and a delivery date agreed in writing before I start. You get a working deliverable you can judge, and then decide whether to continue."],
-  ["I work async and report every week, in writing.", "Each week you get a written update on what's done, and we agree on what comes next. If something looks wrong or missing in between, write to me and I'll deal with it."],
-  ["Optional: an ongoing retainer.", "Sources change without warning. On a monthly retainer I monitor your collection, fix what breaks, and send a written report each month on what ran, what failed and what I did. I look into any failure within one business day."],
+  ["You describe the problem by email.", "Tell me what data you need, where it comes from and how often."],
+  ["We agree on a small fixed-scope pilot.", "Scope, price and delivery date are agreed in writing up front. You get a working deliverable, then decide whether to continue."],
+  ["I work async and report every week, in writing.", "Each week you get a written update on what's done and we agree on what comes next. You can write to me in between if something looks off."],
+  ["Optionally, a monthly retainer.", "Sources change without warning. On a monthly retainer I monitor your collection, handle breakages quickly and send a written report each month on what ran, what failed and what I did."],
 ] as const;
 
 export function HowIWork() {
@@ -27,7 +27,7 @@ export function HowIWork() {
           <aside className="flex flex-col gap-2 rounded-lg border border-border bg-surface p-5 shadow-[0_1px_2px_rgba(11,13,16,.04)] dark:shadow-none lg:sticky lg:top-24 lg:col-span-4">
             <span className="text-mono-label text-accent">Time zone</span>
             <p className="m-0 text-[15px] leading-6">
-              I&apos;m on UTC-3: a full overlap with US East and Central business hours, and with European afternoons. For US West, we agree on a daily window.
+              I&apos;m on UTC-3. That overlaps with US East and Central business hours and with European afternoons.
             </p>
           </aside>
         </div>

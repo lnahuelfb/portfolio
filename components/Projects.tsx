@@ -21,7 +21,7 @@ const PROJECTS: Project[] = [
   {
     name: "Turnealo",
     description:
-      "An appointment-booking SaaS for any business that runs on appointments. Clients book on their own, each professional has their own agenda and services, and each business gets its own page.",
+      "A booking SaaS for businesses that run on appointments. Clients book themselves, each professional has their own schedule and services, and each business gets its own page.",
     tags: ["Next.js", "React", "TypeScript", "Prisma", "Supabase", "Zod", "Web Push"],
     demo: "https://turnealo.com.ar",
     // Repo is private: add `source` once it is public.
@@ -29,7 +29,7 @@ const PROJECTS: Project[] = [
   {
     name: "Che Steam",
     description:
-      "A web app that estimates what a Steam game costs in Argentine pesos. It reads Steam's store data, adds taxes and converts at the official, MEP or crypto rate, and serves it from the edge cache.",
+      "A web app that estimates what a Steam game costs in Argentine pesos. It reads Steam's store data, adds taxes and converts at the official, MEP or crypto rate, and serves results from the edge cache.",
     tags: ["Next.js", "React", "TypeScript", "Edge runtime"],
     demo: "https://che-steam.vercel.app",
     source: "https://github.com/lnahuelfb/che-steam-web",
@@ -55,8 +55,8 @@ export function Projects() {
                 ))}
               </ul>
               <div className="mt-auto flex gap-6">
-                <ExternalLink href={p.demo} className="text-text">Live demo</ExternalLink>
-                {p.source && <ExternalLink href={p.source}>Source</ExternalLink>}
+                <ExternalLink href={p.demo} name={p.name} className="text-text">Live demo</ExternalLink>
+                {p.source && <ExternalLink href={p.source} name={p.name}>Source</ExternalLink>}
               </div>
             </article>
           ))}
