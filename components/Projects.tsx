@@ -11,7 +11,7 @@ type Project = {
 
 const PROJECTS: Project[] = [
   {
-    name: "dedudas-app",
+    name: "Deudas App",
     description:
       "A debt management app. Log what you owe across credit cards, Mercado Pago and informal debts, then track purchases, installments, due dates and totals for each creditor.",
     tags: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Prisma", "Zod", "TanStack Query", "JWT"],
@@ -26,14 +26,22 @@ const PROJECTS: Project[] = [
     demo: "https://turnealo.com.ar",
     // Repo is private: add `source` once it is public.
   },
+  {
+    name: "Che Steam",
+    description:
+      "A web app that estimates what a Steam game costs in Argentine pesos. It reads Steam's store data, adds taxes and converts at the official, MEP or crypto rate, and serves it from the edge cache.",
+    tags: ["Next.js", "React", "TypeScript", "Edge runtime"],
+    demo: "https://che-steam.vercel.app",
+    source: "https://github.com/lnahuelfb/che-steam-web",
+  },
 ];
 
 export function Projects() {
   return (
     <section id="projects" aria-labelledby="projects-title" className="border-t border-border">
       <div className="mx-auto flex max-w-[1120px] flex-col gap-10 px-5 py-16 md:px-8 md:py-24">
-        <SectionHeading id="projects-title" label="02 / Personal projects" title="Two things I built for myself" />
-        <div className="grid gap-6 md:grid-cols-2">
+        <SectionHeading id="projects-title" label="02 / Personal projects" title="Three things I built for myself" />
+        <div className="grid gap-6 lg:grid-cols-3">
           {PROJECTS.map((p) => (
             <article
               key={p.name}
