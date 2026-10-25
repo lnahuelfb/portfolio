@@ -6,7 +6,7 @@
   --bg:#F7F8FA; --surface:#FFFFFF; --surface-2:#F0F2F5;
   --border:#E2E5EA; --border-strong:#C9CED6;
   --text:#0B0D10; --muted:#5B6472;
-  --accent:#B45309; --accent-fg:#FFFFFF; --accent-soft:rgba(180,83,9,.08);
+  --accent:#A84D08; --accent-fg:#FFFFFF; --accent-soft:rgba(180,83,9,.08);
   color-scheme: light;
 }
 .dark {

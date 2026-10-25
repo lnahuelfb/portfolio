@@ -208,7 +208,7 @@ One row with a top border, mono 12px, muted.
 | `--border-strong` | `#323B47` | `#C9CED6` | Hover, connectors |
 | `--text` | `#E6E8EB` | `#0B0D10` | Headings, body |
 | `--muted` | `#8B95A3` | `#5B6472` | Secondary text, labels |
-| `--accent` | `#F5A524` | `#B45309` | Labels, links on hover, key highlights |
+| `--accent` | `#F5A524` | `#A84D08` | Labels, links on hover, key highlights |
 | `--accent-fg` | `#0B0D10` | `#FFFFFF` | Text on the accent button |
 | `--accent-soft` | `rgba(245,165,36,.12)` | `rgba(180,83,9,.08)` | Queue node fill, focus ring halo |
 
@@ -254,7 +254,7 @@ Fonts: **Geist** and **Geist Mono**, loaded with `next/font` (from the `geist` p
   --bg:#F7F8FA; --surface:#FFFFFF; --surface-2:#F0F2F5;
   --border:#E2E5EA; --border-strong:#C9CED6;
   --text:#0B0D10; --muted:#5B6472;
-  --accent:#B45309; --accent-fg:#FFFFFF; --accent-soft:rgba(180,83,9,.08);
+  --accent:#A84D08; --accent-fg:#FFFFFF; --accent-soft:rgba(180,83,9,.08);
 }
 .dark {
   --bg:#0B0D10; --surface:#12161B; --surface-2:#181D23;
