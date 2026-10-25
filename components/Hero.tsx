@@ -1,5 +1,6 @@
-import { MAILTO, SITE } from "@/lib/site";
+import { MAILTO, PITCH, SITE } from "@/lib/site";
 import { Avatar } from "./Avatar";
+import { CopyEmailButton } from "./CopyEmailButton";
 import { ExternalLink } from "./ExternalLink";
 import { ArrowRight } from "./Icons";
 
@@ -23,12 +24,12 @@ export function Hero() {
       <div className="flex min-w-0 flex-col gap-6 lg:col-span-7">
         <div className="flex items-center gap-3">
           <Avatar size={40} />
-          <p className="text-mono-label text-muted">Full-stack developer · Argentina (UTC-3)</p>
+          <p className="text-mono-label text-balance text-muted">Full-stack developer · Argentina (UTC-3)</p>
         </div>
         <h1 className="text-display max-w-[620px]">
           Reliable data collection and automation, built to keep running.
         </h1>
-        <p className="text-body-lg max-w-[560px] text-muted">{SITE.description}</p>
+        <p className="text-body-lg max-w-[560px] text-muted">{PITCH}</p>
         <div className="flex flex-col items-stretch gap-x-6 gap-y-1 pt-2 sm:flex-row sm:flex-wrap sm:items-center">
           <a
             href={MAILTO}
@@ -41,6 +42,15 @@ export function Hero() {
             <ExternalLink href={SITE.linkedin}>LinkedIn</ExternalLink>
             <ExternalLink href={SITE.github}>GitHub</ExternalLink>
           </div>
+        </div>
+        <div className="text-small flex flex-col gap-1 text-muted">
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="font-mono text-[13px] text-text">{SITE.email}</span>
+            <CopyEmailButton email={SITE.email} />
+          </div>
+          <p className="m-0">
+            {SITE.available && "Currently taking on new pilots. "}I reply within one business day.
+          </p>
         </div>
       </div>
 

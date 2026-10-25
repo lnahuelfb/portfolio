@@ -8,11 +8,12 @@ const STATS = [
 export function ProofStrip() {
   return (
     <section aria-label="Case study numbers" className="mx-auto max-w-[1120px] px-5 pb-16 md:px-8 md:pb-24">
+      <p className="text-mono-label mb-3 text-muted">Case study · due diligence platform</p>
       <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-border bg-border md:grid-cols-4">
         {STATS.map(([value, label]) => (
-          <div key={label} className="flex flex-col-reverse gap-2 bg-bg p-5 md:p-6">
+          <div key={label} className="flex flex-col-reverse justify-end gap-2 bg-bg p-4 md:p-6">
             <dt className="text-mono-label text-muted">{label}</dt>
-            <dd className="text-stat m-0">{value}</dd>
+            <dd className="m-0 text-[24px] font-semibold leading-7 tracking-[-0.02em] md:text-stat">{value}</dd>
           </div>
         ))}
       </dl>

@@ -3,8 +3,7 @@
 export function Avatar({ size }: { size: 40 | 64 }) {
   return (
     <div
-      role="img"
-      aria-label="Headshot placeholder"
+      aria-hidden="true"
       style={{ width: size, height: size }}
       className="flex shrink-0 items-center justify-center rounded-full border border-border-strong bg-surface-2 font-mono text-[12px] text-muted"
     >

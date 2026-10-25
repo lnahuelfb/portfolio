@@ -40,7 +40,7 @@ export function Projects() {
   return (
     <section id="projects" aria-labelledby="projects-title" className="border-t border-border">
       <div className="mx-auto flex max-w-[1120px] flex-col gap-10 px-5 py-16 md:px-8 md:py-24">
-        <SectionHeading id="projects-title" label="02 / Personal projects" title="Three things I built for myself" />
+        <SectionHeading id="projects-title" label="03 / Personal projects" title="Three things I built for myself" />
         <div className="grid gap-6 lg:grid-cols-3">
           {PROJECTS.map((p) => (
             <article
