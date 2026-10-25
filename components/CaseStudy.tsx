@@ -3,8 +3,7 @@ import { SectionHeading } from "./SectionHeading";
 import { SpecTable } from "./SpecTable";
 
 const POINTS = [
-  // [verify] isolation claim
-  ["Isolation", "Each source module runs on its own Redis queue, split by load, so a slow source doesn't hold up the rest of the report."],
+  ["Isolation", "Redis queues are split by type of source, each with its own worker, so a heavy module doesn't hold up the light ones. A dispatcher shares capacity fairly between accounts."],
   ["Testing", "About 1,700 automated tests, and CI runs on every pull request."],
   ["Delivery", "An API and a web app in React and TypeScript, used internally by the client in production."],
 ] as const;

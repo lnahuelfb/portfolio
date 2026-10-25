@@ -3,9 +3,8 @@ import { SectionHeading } from "./SectionHeading";
 const STEPS = [
   ["You describe the problem by email.", "Tell me what data you need, where it comes from and how often. A few paragraphs is enough."],
   ["We agree on a small fixed-scope pilot.", "One clear deliverable, scope agreed in writing before I start, so you can judge the work before committing to more."],
-  // [verify] update cadence. If you can commit, state it (e.g. "updates twice a week") instead of "regular".
-  ["I work async and keep you updated in writing.", "You get regular written updates on what's done, what's next and any blockers, with no need to schedule meetings."],
-  ["Optional: monthly maintenance.", "Websites and data sources change, and scrapers break when they do. If you want, I keep things running after delivery."],
+  ["I work async and report every week, in writing.", "Each week you get a written update on what's done, and we agree on what comes next. If something looks wrong or missing in between, write to me and I'll deal with it."],
+  ["Optional: an ongoing retainer.", "Websites and data sources change, and scrapers break when they do. On a monthly retainer I keep the system running and fix what breaks, and you get a written report of the support each month."],
 ] as const;
 
 export function HowIWork() {

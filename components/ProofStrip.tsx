@@ -17,7 +17,7 @@ export function ProofStrip() {
         ))}
       </dl>
       <p className="text-small mt-3 text-muted">
-        From the case study below. Report time measured on the first 20 studies.
+        From the case study below. Report time measured on the first 20 reports.
       </p>
     </section>
   );

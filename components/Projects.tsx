@@ -5,27 +5,26 @@ type Project = {
   name: string;
   description: string;
   tags: string[];
-  placeholderTags?: string[];
   demo: string;
-  source: string;
+  source?: string;
 };
 
-// [placeholder] every "#" link, project name, description line and stack gap.
 const PROJECTS: Project[] = [
   {
-    name: "[Project name]",
-    description: "A credit-card and debt management app. [Add one line on what a user does with it.]",
+    name: "dedudas-app",
+    description:
+      "A debt management app. Log what you owe across credit cards, Mercado Pago and informal debts, then track purchases, installments, due dates and totals for each creditor.",
     tags: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Prisma", "Zod", "TanStack Query", "JWT"],
-    demo: "#",
-    source: "#",
+    demo: "https://deudas-ashen.vercel.app",
+    source: "https://github.com/lnahuelfb/deudas-frontend",
   },
   {
     name: "Turnealo",
-    description: "An appointment-management SaaS. [Add one line on who it's for.]",
-    tags: ["Next.js"],
-    placeholderTags: ["[rest of stack]"],
-    demo: "#",
-    source: "#",
+    description:
+      "An appointment-booking SaaS for any business that runs on appointments. Clients book on their own, each professional has their own agenda and services, and each business gets its own page.",
+    tags: ["Next.js", "React", "TypeScript", "Prisma", "Supabase", "Zod", "Web Push"],
+    demo: "https://turnealo.com.ar",
+    // Repo is private: add `source` once it is public.
   },
 ];
 
@@ -46,13 +45,10 @@ export function Projects() {
                 {p.tags.map((t) => (
                   <li key={t} className="rounded border border-border px-2 py-1">{t}</li>
                 ))}
-                {p.placeholderTags?.map((t) => (
-                  <li key={t} className="rounded border border-dashed border-border-strong px-2 py-1">{t}</li>
-                ))}
               </ul>
               <div className="mt-auto flex gap-6">
                 <ExternalLink href={p.demo} className="text-text">Live demo</ExternalLink>
-                <ExternalLink href={p.source}>Source</ExternalLink>
+                {p.source && <ExternalLink href={p.source}>Source</ExternalLink>}
               </div>
             </article>
           ))}
