@@ -1,12 +1,14 @@
 const ROWS: [string, string][] = [
   ["role", "Sole developer (backend, API, front end)"],
   ["sources", "38 modules: 21 for people, 17 for companies"],
-  ["queues", "Redis, one queue per module, split by load"],
-  ["backend", "Python, FastAPI, Playwright, Redis, MySQL"],
+  ["queues", "Redis, separate queues and workers by type of source"],
+  ["scheduling", "Global cap on concurrent reports, fair turns per account"],
+  ["backend", "Python (RQ workers), FastAPI, Playwright, Redis"],
+  ["database", "MySQL, private, not exposed to the internet"],
   ["front end", "React, TypeScript"],
   ["quality", "~1,700 automated tests · CI on every pull request"],
   ["timeline", "~3 months"],
-  ["report time", "~3–4 minutes (first 20 studies)"],
+  ["report time", "~3–4 minutes (first 20 reports)"],
   ["status", "In production, used internally by the client"],
   ["sources used", "Public and third-party web sources"],
 ];

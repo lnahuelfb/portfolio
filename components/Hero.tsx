@@ -5,9 +5,8 @@ import { ArrowRight } from "./Icons";
 
 const ROWS: [string, string][] = [
   ["collect", "web sources · APIs · browsers"],
-  ["queue", "Redis job queues, split by load"],
+  ["queue", "Redis job queues, split by type"],
   ["recover", "retries · resume after failure"],
-  // [verify] "alerts" wording. If no alerts are set up, use "monitoring · logs".
   ["watch", "monitoring · alerts"],
   ["ship", "API + web app"],
 ];

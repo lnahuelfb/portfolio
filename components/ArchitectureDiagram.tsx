@@ -1,12 +1,11 @@
 import { Fragment } from "react";
 import { Chevron } from "./Icons";
 
-// [verify] workers really run Python/Playwright and MySQL sits behind the API.
 const NODES = [
   { name: "Sources", lines: ["38 modules", "21 people", "17 companies"], core: false },
-  { name: "Redis queues", lines: ["one per module", "split by load"], core: true },
-  { name: "Workers", lines: ["Python", "Playwright"], core: false },
-  { name: "API", lines: ["FastAPI", "MySQL"], core: false },
+  { name: "Redis queues", lines: ["split by type", "one worker each"], core: true },
+  { name: "Workers", lines: ["Python · RQ", "Playwright"], core: false },
+  { name: "API", lines: ["FastAPI"], core: false },
   { name: "Web app", lines: ["React", "TypeScript"], core: false },
 ];
 
@@ -15,7 +14,7 @@ export function ArchitectureDiagram() {
     <figure className="m-0 flex flex-col gap-3">
       <div
         role="img"
-        aria-label="Architecture: 38 source modules feed Redis queues, one per module; Python and Playwright workers process them; a FastAPI and MySQL API serves a React and TypeScript web app."
+        aria-label="Architecture: 38 source modules feed separate Redis queues split by type, each with its own worker; Python RQ workers using Playwright process them; a FastAPI API serves a React and TypeScript web app."
         className="flex flex-col items-stretch lg:flex-row"
       >
         {NODES.map((n, i) => (
