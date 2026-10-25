@@ -3,10 +3,13 @@ import { ArrowUpRight } from "./Icons";
 export function ExternalLink({
   href,
   children,
+  name,
   className = "",
 }: {
   href: string;
   children: React.ReactNode;
+  /** Project or site name, added to the screen-reader text only. */
+  name?: string;
   className?: string;
 }) {
   return (
@@ -18,7 +21,7 @@ export function ExternalLink({
     >
       {children}
       <ArrowUpRight />
-      <span className="sr-only">(opens in new tab)</span>
+      <span className="sr-only">({name ? `${name}, ` : ""}opens in new tab)</span>
     </a>
   );
 }

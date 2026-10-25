@@ -11,12 +11,12 @@ export const SITE = {
   available: true,
   title: "Nahuel Fernandez · Data collection and automation developer",
   description:
-    "I build scrapers, data pipelines and the systems around them: job queues, retries, recovery after failures and monitoring. I work async, with clear written updates.",
+    "I build scrapers, data pipelines and the systems around them: job queues, retries, failure recovery and monitoring. I work async, with written updates.",
 } as const;
 
 // Hero subline. SITE.description (shorter) stays as the meta description.
 export const PITCH =
-  "For teams that depend on web data and can't afford it to break quietly. I build scrapers, data pipelines and the systems around them: queues, retries, recovery after failures and monitoring. I work async, with clear written updates.";
+  "For teams that depend on web data and can't afford for it to break quietly. I build scrapers, data pipelines and the systems around them: queues, retries, recovery after failures and monitoring. I work async, with written updates.";
 
 const MAIL_BODY = [
   "What data do you need?",

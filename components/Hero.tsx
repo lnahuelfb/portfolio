@@ -5,7 +5,7 @@ import { ExternalLink } from "./ExternalLink";
 import { ArrowRight } from "./Icons";
 
 const ROWS: [string, string][] = [
-  ["collect", "web sources · APIs · browsers"],
+  ["collect", "web sources · APIs · browser automation"],
   ["queue", "Redis job queues, split by type"],
   ["recover", "retries · resume after failure"],
   ["watch", "monitoring · alerts"],
@@ -24,7 +24,7 @@ export function Hero() {
       <div className="flex min-w-0 flex-col gap-6 lg:col-span-7">
         <div className="flex items-center gap-3">
           <Avatar size={40} />
-          <p className="text-mono-label text-balance text-muted">Full-stack developer · Argentina (UTC-3)</p>
+          <p className="text-mono-label text-balance text-muted"><span className="whitespace-nowrap">Full-stack developer ·</span> <span className="whitespace-nowrap">Argentina (UTC-3)</span></p>
         </div>
         <h1 className="text-display max-w-[620px]">
           Reliable data collection and automation, built to keep running.
