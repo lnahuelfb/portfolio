@@ -1,13 +1,15 @@
-// Placeholder until the headshot exists. When it does, swap for next/image
-// (128x128 / 192x192 AVIF/WebP, `priority` in the hero) with the same size.
-export function Avatar({ size }: { size: 40 | 64 }) {
+import Image from "next/image";
+
+// 192x192 WebP, shown at 40 or 64 px so it stays sharp on 3x screens.
+export function Avatar({ size, priority = false }: { size: 40 | 64; priority?: boolean }) {
   return (
-    <div
-      aria-hidden="true"
-      style={{ width: size, height: size }}
-      className="flex shrink-0 items-center justify-center rounded-full border border-border-strong bg-surface-2 font-mono text-[12px] text-muted"
-    >
-      NF
-    </div>
+    <Image
+      src="/avatar-192.webp"
+      alt="Nahuel Fernandez"
+      width={size}
+      height={size}
+      priority={priority}
+      className="shrink-0 rounded-full border border-border-strong bg-surface-2 object-cover"
+    />
   );
 }
