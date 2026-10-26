@@ -11,7 +11,7 @@ type Project = {
 
 const PROJECTS: Project[] = [
   {
-    name: "Deudas App",
+    name: "DeudApp",
     description:
       "A debt management app. Log what you owe across credit cards, Mercado Pago and informal debts, then track purchases, installments, due dates and totals for each creditor.",
     tags: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Prisma", "Zod", "TanStack Query", "JWT"],
