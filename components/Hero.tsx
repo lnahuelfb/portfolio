@@ -23,7 +23,7 @@ export function Hero() {
     >
       <div className="flex min-w-0 flex-col gap-6 lg:col-span-7">
         <div className="flex items-center gap-3">
-          <Avatar size={40} />
+          <Avatar size={40} priority />
           <p className="text-mono-label text-balance text-muted"><span className="whitespace-nowrap">Full-stack developer ·</span> <span className="whitespace-nowrap">Argentina (UTC-3)</span></p>
         </div>
         <h1 className="text-display max-w-[620px]">
